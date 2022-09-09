@@ -1,0 +1,14 @@
+---
+- name: List all vaults
+  hosts: localhost
+  gather_facts: false
+  
+  tasks:
+  - name: List Key Vaults in current subscription
+    azure.azcollection.azure_rm_keyvault_info:
+      resource_group: "{{ azure_rg }}"
+    register: AzureVaults
+
+  - name: Debug it
+    debug:
+      msg: "{{ AzureVaults }}"
