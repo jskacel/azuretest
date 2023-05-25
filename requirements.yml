@@ -1,0 +1,2 @@
+collections:
+  - name: azure.azcollection.azure_rm_keyvault
